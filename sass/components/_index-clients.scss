@@ -1,0 +1,31 @@
+
+.clients {
+    &__list {display: flex;}
+
+    &__link {
+        display: flex;
+        height: 92px;
+        flex-basis: calc((100% - 30px * 5)/6);
+        margin-right: 30px;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #AFB1B8;
+        border-radius: 4px;
+        transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+        &:last-child {margin-right: 0;}
+    
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            border: 1px solid var(--accent-color);}
+    }
+
+    &__icon {
+        fill: var(--icon-color);
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+        .clients__link:hover &,
+        .clients__link:focus & {fill: var(--accent-color);}
+    }
+}

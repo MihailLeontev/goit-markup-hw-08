@@ -1,0 +1,14 @@
+.footer {
+    background-color: var(--main-background);
+
+    &_flex {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.footer_logo--white {
+    margin-bottom: 20px;
+    color: var(--button-color);
+    display: inline-block;
+}
