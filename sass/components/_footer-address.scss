@@ -1,17 +1,30 @@
 .address {
-    display: inline-block;
+    display: block;
     font-style: normal;
-    margin-right: 70px;
-    width: 231px;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+
+    @media screen and (min-width: 768px) {
+        & {
+            justify-content: start;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        & {
+            margin-right: 70px;
+            width: 231px;
+        }
+    }
 }
 
 .address__item {
     margin-bottom: 9px;
 
-    &:last-child {margin-bottom: 0px;}
+    &:last-child {
+        margin-bottom: 0px;
+    }
 }
 
 .address__location {
@@ -19,7 +32,9 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,
-    &:focus {color: var(--accent-color);}
+    &:focus {
+        color: var(--accent-color);
+    }
 }
 
 .address__mail {
@@ -27,7 +42,9 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,
-    &:focus {color: var(--accent-color);}
+    &:focus {
+        color: var(--accent-color);
+    }
 }
 
 .address__phone {
@@ -35,5 +52,7 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,
-    &:focus {color: var(--accent-color);}
+    &:focus {
+        color: var(--accent-color);
+    }
 }

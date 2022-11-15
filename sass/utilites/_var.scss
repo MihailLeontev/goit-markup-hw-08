@@ -14,6 +14,10 @@ body {
     font-family: "Roboto", sans-serif;
     background: #FFFFFF;
     color: var(--primary-text-color);
+
+    &.overflow {
+        overflow: hidden;
+    }
 }
 
 img {

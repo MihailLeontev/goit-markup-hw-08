@@ -1,9 +1,17 @@
 .footer {
     background-color: var(--main-background);
 
-    &_flex {
-        display: flex;
-        align-items: center;
+    @media screen and (min-width: 1200px) {
+        &_flex {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        & {
+            justify-content: center;
+        }
     }
 }
 
@@ -11,4 +19,19 @@
     margin-bottom: 20px;
     color: var(--button-color);
     display: inline-block;
+}
+
+.footer-div {
+    padding-top: 60px;
+    justify-content: center;
+    text-align: center;
+
+    @media screen and (min-width: 1200px) {
+        & {
+            margin-right: 70px;
+            padding-top: 0;
+            text-align: left;
+        }
+    }
+
 }
