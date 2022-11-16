@@ -1,16 +1,52 @@
 .features-section {
-    padding-bottom: 0;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+        & {
+            padding-bottom: 0;
+        }
+    }
 
     &__list {
-        display: flex;}
+
+
+        @media screen and (min-width: 768px) {
+            & {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            & {
+                display: flex;
+                gap: 30px;
+            }
+        }
+    }
 
     &__title {
         margin-bottom: 10px;
         font-weight: 700;
+        text-align: center;
         font-size: 14px;
         line-height: 1.14;
         letter-spacing: 0.03em;
-        text-transform: uppercase;}
+        text-transform: uppercase;
+
+        @media screen and (min-width: 768px) {
+            & {
+                text-align: start;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            & {
+                text-align: start;
+            }
+        }
+    }
 
     &__box {
         margin-bottom: 30px;
@@ -18,19 +54,32 @@
         justify-content: center;
         align-items: center;
         height: 120px;
-        background-color: var(--hero-background);}
+        background-color: var(--hero-background);
+    }
 
     &__text {
         font-size: 14px;
         line-height: 1.71;
         letter-spacing: 0.03em;
-        color: var(--title-text-color);}
+        color: var(--title-text-color);
+    }
 
     &__item {
-        flex-basis: calc((100% - 30px * 3)/4);
-        margin-right: 30px;
-    
-        &:last-child {
-            margin-right: 0;}
+        margin-bottom: 30px;
+
+        @media screen and (min-width: 768px) {
+            & {
+                flex-basis: calc((100% - 30px)/2);
+                margin-bottom: 0;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            & {
+                flex-basis: calc((100% - 30px * 3)/4);
+                margin-bottom: 0;
+
+            }
+        }
     }
 }

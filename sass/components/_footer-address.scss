@@ -1,20 +1,24 @@
 .address {
-    display: block;
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    padding-top: 60px;
+        display: block;
+        font-style: normal;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
 
     @media screen and (min-width: 768px) {
         & {
-            justify-content: start;
+            justify-content: center;
         }
     }
 
     @media screen and (min-width: 1200px) {
         & {
+            padding-top: 0;
             margin-right: 70px;
             width: 231px;
+            text-align: start;
         }
     }
 }
