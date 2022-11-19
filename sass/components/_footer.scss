@@ -15,6 +15,8 @@
     }
 }
 
+
+
 .footer_logo--white {
     margin-bottom: 20px;
     color: var(--button-color);
@@ -22,13 +24,18 @@
 }
 
 .footer-div {
+   
     padding-top: 60px;
     justify-content: center;
     text-align: center;
 
+@media screen and (min-width: 768px) {
+        & {
+           display: flex;
+        }
+    }
     @media screen and (min-width: 1200px) {
         & {
-            margin-right: 70px;
             padding-top: 0;
             text-align: left;
         }

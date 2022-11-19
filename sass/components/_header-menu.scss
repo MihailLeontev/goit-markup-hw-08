@@ -1,11 +1,10 @@
 .menu {
-    position: absolute;
+position: absolute;
     margin-left: auto;
     width: 40px;
     height: 40px;
-    top: 50%;
+    top: 10px;
     right: 10px;
-    transform: translateY(-50%);
     background-color: var(--button-color);
     border: none;
     z-index: 100;
@@ -17,9 +16,11 @@
     }
 }
 
+.is-open .menu {
+    position: fixed;
+}
+
 .menu__close {
-    width: 40px;
-    height: 40px;
     z-index: 100;
 }
 
@@ -38,7 +39,7 @@
 .menu__content {
     background-color: var(--button-color);
     height: 100vh;
-    
+    z-index: 1;
 
     @media screen and (min-width: 768px) {
         & {
@@ -55,12 +56,13 @@
     display: flex;
     flex-direction: column;
     transform: translateX(0);
+    overflow: auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .menu__content {
         display: none;
-        position: absolute;
+        position: fixed;
         padding-left: 40px;
         width: 100%;
         left: 0;

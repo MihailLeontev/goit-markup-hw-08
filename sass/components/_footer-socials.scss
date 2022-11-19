@@ -1,9 +1,16 @@
 .footer-socials {
-    text-align: center;
     justify-content: center;
     padding-top: 60px;
     padding-bottom: 0px;
-
+    
+    @media (max-width: 767px){
+        &{
+            text-align: center;
+        
+        }
+    }
+        
+    
 
     @media screen and (min-width:1200px) {
         & {

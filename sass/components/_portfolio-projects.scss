@@ -39,6 +39,9 @@
     overflow: hidden;
 }
 
+.menu.is-open .project__img {
+    opacity: 0;}
+
 .projects__overlay {
     position: absolute;
     display: flex;
