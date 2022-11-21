@@ -47,29 +47,47 @@
 .logo {
 font-family: 'Raleway';
     font-weight: 700;
-    font-size: 26px;
-    padding: 16px 0;
+    font-size: 24px;
+    
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: var(--accent-color);
+    
+    @media (max-width:767px){
+        &{
+         padding: 16px 0;
+        }
+    }
 
     @media screen and (min-width: 768px) {
         & {
             padding: 0;
         }
     }
+    @media screen and (min-width: 1200px) {
+             & {
+               font-size: 26px;
+             }
+         }
 }
 
 .secondary-name {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
+ @media (min-width:1200px) {
+    &{
+    margin-bottom: 50px ;}
+        font-size: 36px;
+       
+ }
 }
 
 .name {
+    margin-top: 12px;
 margin-bottom: 20px;
     font-weight: 700;
     font-size: 14px;

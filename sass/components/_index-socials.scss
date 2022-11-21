@@ -1,6 +1,12 @@
 .socials {
     display: flex;
     justify-content: center;
+    margin-bottom: 24px;
+ @media (min-width: 1200px) {
+    &{margin-bottom: 30px;
+    }
+    
+ }
 }
 
 .socials__link {
@@ -21,7 +27,7 @@
 }
 
 .socials__item {
-    margin-bottom: 30px;
+   
     margin-right: 10px;
 
     &:last-child {margin-right: 0;}

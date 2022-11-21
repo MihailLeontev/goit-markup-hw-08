@@ -1,6 +1,6 @@
 .footer {
     background-color: var(--main-background);
-
+    padding: 60px 0;
     @media screen and (min-width: 1200px) {
         &_flex {
             display: flex;
@@ -15,9 +15,14 @@
     }
 }
 
+.footer__logo{
+    padding: 0;
+}
+
 
 
 .footer_logo--white {
+    padding: 0;
     margin-bottom: 20px;
     color: var(--button-color);
     display: inline-block;
@@ -25,7 +30,6 @@
 
 .footer-div {
    
-    padding-top: 60px;
     justify-content: center;
     text-align: center;
 

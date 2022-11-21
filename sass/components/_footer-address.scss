@@ -1,5 +1,5 @@
 .address {
-    margin-top: 60px;
+   
         display: block;
         font-style: normal;
         text-align: center;
@@ -16,20 +16,27 @@
 
     @media screen and (min-width: 1200px) {
         & {
+           
             padding-top: 0;
             margin-right: 70px;
-            width: 231px;
             text-align: start;
         }
     }
 }
 
 .address__item {
+    
     margin-bottom: 9px;
 
     &:last-child {
         margin-bottom: 0px;
     }
+    @media screen and (min-width: 768px) {
+             & {
+                width: 231px;
+                height: 21px;
+             }
+         }
 }
 
 .address__location {
@@ -40,6 +47,7 @@
     &:focus {
         color: var(--accent-color);
     }
+
 }
 
 .address__mail {

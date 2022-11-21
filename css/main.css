@@ -80,28 +80,46 @@ p {
 .logo {
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 26px;
-  padding: 16px 0;
+  font-size: 24px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--accent-color);
+}
+@media (max-width: 767px) {
+  .logo {
+    padding: 16px 0;
+  }
 }
 @media screen and (min-width: 768px) {
   .logo {
     padding: 0;
   }
 }
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+  }
+}
 
 .secondary-name {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
 }
+@media (min-width: 1200px) {
+  .secondary-name {
+    font-size: 36px;
+  }
+  .secondary-name {
+    margin-bottom: 50px;
+  }
+}
 
 .name {
+  margin-top: 12px;
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -165,6 +183,7 @@ p {
   display: inline-block;
   font-size: 40px;
   line-height: 1.17;
+  font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -514,9 +533,6 @@ p {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
-.features-section__item {
-  margin-bottom: 30px;
-}
 @media screen and (min-width: 768px) {
   .features-section__item {
     flex-basis: calc((100% - 30px) / 2);
@@ -528,6 +544,9 @@ p {
     flex-basis: calc((100% - 90px) / 4);
     margin-bottom: 0;
   }
+}
+.features-section__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .specialization__list {
@@ -598,27 +617,39 @@ p {
 }
 
 .team__item {
-  margin-bottom: 30px;
+  height: 622px;
   background-color: var(--button-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 @media screen and (min-width: 768px) {
   .team__item {
+    max-height: 536px;
     margin-bottom: 0;
     flex-basis: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
   .team__item {
+    max-height: 428px;
     margin-bottom: 0;
     flex-basis: calc((100% - 90px) / 4);
   }
 }
 
+/*
+.team__item:not(:last-child) {
+    margin-bottom: 30px;
+}*/
 .socials {
   display: flex;
   justify-content: center;
+  margin-bottom: 24px;
+}
+@media (min-width: 1200px) {
+  .socials {
+    margin-bottom: 30px;
+  }
 }
 
 .socials__link {
@@ -638,7 +669,6 @@ p {
 }
 
 .socials__item {
-  margin-bottom: 30px;
   margin-right: 10px;
 }
 .socials__item:last-child {
@@ -839,6 +869,7 @@ p {
 
 .footer {
   background-color: var(--main-background);
+  padding: 60px 0;
 }
 @media screen and (min-width: 1200px) {
   .footer_flex {
@@ -852,14 +883,18 @@ p {
   }
 }
 
+.footer__logo {
+  padding: 0;
+}
+
 .footer_logo--white {
+  padding: 0;
   margin-bottom: 20px;
   color: var(--button-color);
   display: inline-block;
 }
 
 .footer-div {
-  padding-top: 60px;
   justify-content: center;
   text-align: center;
 }
@@ -876,7 +911,6 @@ p {
 }
 
 .address {
-  margin-top: 60px;
   display: block;
   font-style: normal;
   text-align: center;
@@ -894,7 +928,6 @@ p {
   .address {
     padding-top: 0;
     margin-right: 70px;
-    width: 231px;
     text-align: start;
   }
 }
@@ -904,6 +937,12 @@ p {
 }
 .address__item:last-child {
   margin-bottom: 0px;
+}
+@media screen and (min-width: 768px) {
+  .address__item {
+    width: 231px;
+    height: 21px;
+  }
 }
 
 .address__location {
@@ -940,11 +979,14 @@ p {
     text-align: center;
   }
 }
+@media (min-width: 768px) {
+  .footer-socials {
+    padding-top: 0;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer-socials {
     margin-right: 93px;
-    padding-top: 72px;
-    padding-bottom: 100px;
   }
 }
 .footer-socials__icon {
@@ -955,6 +997,7 @@ p {
 .footer-socials__list {
   justify-content: center;
   display: flex;
+  margin-bottom: 40px;
 }
 
 .footer-socials__item {
@@ -982,11 +1025,14 @@ p {
 
 .subscribe {
   text-align: center;
+  padding: 0;
+  margin-top: 60px;
 }
 @media screen and (min-width: 1200px) {
   .subscribe {
-    padding-top: 72px;
+    margin-top: 0;
     text-align: start;
+    margin-bottom: 34px;
   }
 }
 .subscribe::-moz-placeholder {
